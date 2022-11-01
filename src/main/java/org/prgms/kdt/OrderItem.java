@@ -5,7 +5,7 @@ import java.util.UUID;
 public class OrderItem {
     public final UUID productId;
     public final long productPrice;
-    public final int quantity;
+    public final long quantity;
 
     public OrderItem(UUID productId, long productPrice, int quantity) {
         this.productId = productId;
@@ -21,7 +21,7 @@ public class OrderItem {
         return productPrice;
     }
 
-    public int getQuantity() {
+    public long getQuantity() {
         return quantity;
     }
 }

@@ -17,4 +17,18 @@ public class Order {
         this.discountAmount = discountAmount;
     }
 
+    public long totalAmount() {
+        var beforeDiscount = orderItems.stream()
+                .map(v -> v.getProductPrice() * v.getQuantity())
+                .reduce(0L, Long::sum);
+        return beforeDiscount - discountAmount;
+    }
+
+    public void setDiscountAmount(long discountAmount) {
+        this.discountAmount = discountAmount;
+    }
+
+    public void setOrderStatus(OrderStatus orderStatus) {
+        this.orderStatus = orderStatus;
+    }
 }
