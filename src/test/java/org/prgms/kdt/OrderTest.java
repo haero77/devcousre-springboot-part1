@@ -1,6 +1,9 @@
 package org.prgms.kdt;
 
 import org.junit.jupiter.api.Test;
+import org.prgms.kdt.model.FixedAmountVoucher;
+import org.prgms.kdt.model.Order;
+import org.prgms.kdt.model.OrderStatus;
 
 import java.util.ArrayList;
 import java.util.UUID;
@@ -13,8 +16,8 @@ class OrderTest {
     void order_tester() {
         // given
         var customerId = UUID.randomUUID();
-        var orderItems = new ArrayList<OrderItem>() {{
-            add(new OrderItem(UUID.randomUUID(), 100L, 1));
+        var orderItems = new ArrayList<OrderStatus.OrderItem>() {{
+            add(new OrderStatus.OrderItem(UUID.randomUUID(), 100L, 1));
         }};
         var fixedAmountVoucher = new FixedAmountVoucher(UUID.randomUUID(), 10L);
 

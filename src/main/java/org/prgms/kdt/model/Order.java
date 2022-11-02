@@ -1,6 +1,5 @@
-package org.prgms.kdt;
+package org.prgms.kdt.model;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -11,7 +10,7 @@ public class Order {
     private Voucher voucher;
     private OrderStatus orderStatus = OrderStatus.ACCEPTED;
 
-    public Order(UUID orderId, UUID customerId, ArrayList<OrderItem> orderItems, Voucher voucher) {
+    public Order(UUID orderId, UUID customerId, List<OrderItem> orderItems, Voucher voucher) {
         this.orderId = orderId;
         this.customerId = customerId;
         this.orderItems = orderItems;
