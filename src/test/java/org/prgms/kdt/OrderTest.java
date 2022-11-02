@@ -16,9 +16,10 @@ class OrderTest {
         var orderItems = new ArrayList<OrderItem>() {{
             add(new OrderItem(UUID.randomUUID(), 100L, 1));
         }};
+        var fixedAmountVoucher = new FixedAmountVoucher(UUID.randomUUID(), 10L);
 
         // when
-        var order = new Order(UUID.randomUUID(), customerId, orderItems, 10L);
+        var order = new Order(UUID.randomUUID(), customerId, orderItems, fixedAmountVoucher);
 
         // then
         assertThat(order.totalAmount()).as("totalAmount %d is not 90L", order.totalAmount())
