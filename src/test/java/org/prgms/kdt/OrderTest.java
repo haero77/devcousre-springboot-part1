@@ -1,14 +1,11 @@
 package org.prgms.kdt;
 
 import org.junit.jupiter.api.Test;
-import org.prgms.kdt.model.FixedAmountVoucher;
 import org.prgms.kdt.model.Order;
 import org.prgms.kdt.model.OrderItem;
-import org.prgms.kdt.model.OrderStatus;
-import org.prgms.kdt.service.OrderContext;
+import org.prgms.kdt.service.AppConfiguration;
 import org.prgms.kdt.service.OrderService;
 
-import java.beans.Customizer;
 import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.UUID;
@@ -21,8 +18,8 @@ class OrderTest {
     void order_tester() {
         // given
         UUID customerId = UUID.randomUUID();
-        OrderContext orderContext = new OrderContext();
-        OrderService orderService = orderContext.orderService();
+        AppConfiguration appConfiguration = new AppConfiguration();
+        OrderService orderService = appConfiguration.orderService();
 
         // when
         Order order = orderService.createOrder(customerId, new ArrayList<>() {{
