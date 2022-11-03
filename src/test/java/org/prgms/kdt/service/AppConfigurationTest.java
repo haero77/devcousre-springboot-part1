@@ -1,10 +1,9 @@
-package org.prgms.kdt;
+package org.prgms.kdt.service;
 
 import org.junit.jupiter.api.Test;
 import org.prgms.kdt.model.Order;
 import org.prgms.kdt.model.OrderItem;
-import org.prgms.kdt.service.AppConfiguration;
-import org.prgms.kdt.service.OrderService;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.text.MessageFormat;
 import java.util.ArrayList;
@@ -12,14 +11,18 @@ import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class OrderTest {
+class AppConfigurationTest {
 
     @Test
-    void order_tester() {
+    void application_context_test() {
+
         // given
-        UUID customerId = UUID.randomUUID();
-        AppConfiguration appConfiguration = new AppConfiguration();
-        OrderService orderService = appConfiguration.orderService();
+
+        // Java 기반의 설정을 이용할 경우 AnnotationConfigApplicationContext 구현체를 사용
+        var applicationContext
+                = new AnnotationConfigApplicationContext(AppConfiguration.class);
+        var customerId = UUID.randomUUID();
+        var orderService = applicationContext.getBean(OrderService.class); // BeanFactory 의 getBean()
 
         // when
         Order order = orderService.createOrder(customerId, new ArrayList<>() {{
