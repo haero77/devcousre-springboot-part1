@@ -9,7 +9,5 @@ import java.util.UUID;
 public interface VoucherRepository {
 
     // Optional을 이용하여 voucherId에 해당하는 Voucher Entity가 없을 수도 있음을 알린다.
-    public Optional<Voucher> findById(UUID voucherId) {
-
-    }
+    Optional<Voucher> findById(UUID voucherId);
 }

@@ -3,6 +3,7 @@ package org.prgms.kdt.service;
 import org.prgms.kdt.model.Voucher;
 import org.prgms.kdt.repository.VoucherRepository;
 
+import java.text.MessageFormat;
 import java.util.UUID;
 
 public class VoucherService {
@@ -13,7 +14,9 @@ public class VoucherService {
     }
 
     public Voucher getVoucher(UUID voucherId) {
-        return voucherRepository.findById(voucherId);
+        return voucherRepository
+                .findById(voucherId)
+                .orElseThrow(() -> new RuntimeException("Cannot find a voucher for" + voucherId));
     }
 
     public void useVoucher(Voucher voucher) {
