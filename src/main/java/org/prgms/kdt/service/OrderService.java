@@ -4,10 +4,12 @@ import org.prgms.kdt.model.Order;
 import org.prgms.kdt.model.OrderItem;
 import org.prgms.kdt.model.Voucher;
 import org.prgms.kdt.repository.OrderRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.UUID;
 
+@Service
 public class OrderService {
 
     // OrderService는 voucherService와 orderRepository에 의존

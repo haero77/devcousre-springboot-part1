@@ -2,10 +2,11 @@ package org.prgms.kdt.service;
 
 import org.prgms.kdt.model.Voucher;
 import org.prgms.kdt.repository.VoucherRepository;
+import org.springframework.stereotype.Service;
 
-import java.text.MessageFormat;
 import java.util.UUID;
 
+@Service
 public class VoucherService {
     private final VoucherRepository voucherRepository;
 

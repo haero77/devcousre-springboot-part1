@@ -1,5 +1,6 @@
 package org.prgms.kdt.service;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.prgms.kdt.model.Order;
 import org.prgms.kdt.model.OrderItem;
@@ -12,6 +13,8 @@ import java.util.UUID;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class AppConfigurationTest {
+
+    AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfiguration.class);
 
     @Test
     void application_context_test() {
@@ -33,5 +36,16 @@ class AppConfigurationTest {
         assertThat(order.totalAmount())
                 .as(MessageFormat.format("totalAmount {0} is not 100L", order.totalAmount()))
                 .isEqualTo(100L);
+    }
+
+    @Test
+    @DisplayName("@Bean이 아니라 @Service를 사용했을 때도 정상동작하는지 테스트")
+    void operation_test_when_using_service_annotation() {
+        String[] beanDefinitionNames = ac.getBeanDefinitionNames();
+
+        for (String beanDefinitionName : beanDefinitionNames) {
+            System.out.println("beanDefinitionName = " + beanDefinitionName);
+            System.out.println("ac.getBean(beanDefinitionName) = " + ac.getBean(beanDefinitionName));
+        }
     }
 }
