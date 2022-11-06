@@ -1,29 +1,14 @@
-package org.prgms.kdt.service;
+package org.prgms.kdt;
 
 import org.prgms.kdt.model.Order;
-import org.prgms.kdt.model.Voucher;
 import org.prgms.kdt.repository.OrderRepository;
-import org.prgms.kdt.repository.VoucherRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-import java.util.Optional;
-import java.util.UUID;
-
 @Configuration
 @ComponentScan
-public class AppConfiguration {
-
-    @Bean
-    public VoucherRepository voucherRepository() {
-        return new VoucherRepository() {
-            @Override
-            public Optional<Voucher> findById(UUID voucherId) {
-                return Optional.empty();
-            }
-        };
-    }
+public class AppConfiguration { // 최상위 폴더에 있을때 ComponentScan과 관련하여 오류가 안 난다. 
 
     @Bean
     public OrderRepository orderRepository() {

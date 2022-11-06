@@ -2,6 +2,7 @@ package org.prgms.kdt.service;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.prgms.kdt.AppConfiguration;
 import org.prgms.kdt.model.Order;
 import org.prgms.kdt.model.OrderItem;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
