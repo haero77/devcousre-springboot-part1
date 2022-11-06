@@ -24,8 +24,7 @@ public class OrderService {
     // OrderService는 Order Entity 를 생성하는 책임이 있다.
     public Order createOrder(UUID customerId, List<OrderItem> orderItems) {
         Order order = new Order(UUID.randomUUID(), customerId, orderItems);
-        orderRepository.insert(order);
-        return order;
+        return orderRepository.insert(order);
     }
 
     public Order createOrder(UUID customerId, List<OrderItem> orderItems, UUID voucherId) {
@@ -35,6 +34,4 @@ public class OrderService {
         voucherService.useVoucher(voucher);
         return order;
     }
-
-
 }

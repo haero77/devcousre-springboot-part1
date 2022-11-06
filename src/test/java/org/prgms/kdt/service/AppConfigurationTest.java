@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.prgms.kdt.AppConfiguration;
 import org.prgms.kdt.model.Order;
 import org.prgms.kdt.model.OrderItem;
+import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.text.MessageFormat;
@@ -45,8 +46,12 @@ class AppConfigurationTest {
         String[] beanDefinitionNames = ac.getBeanDefinitionNames();
 
         for (String beanDefinitionName : beanDefinitionNames) {
-            System.out.println("beanDefinitionName = " + beanDefinitionName);
-            System.out.println("ac.getBean(beanDefinitionName) = " + ac.getBean(beanDefinitionName));
+            BeanDefinition beanDefinition = ac.getBeanDefinition(beanDefinitionName);
+
+            if (beanDefinition.getRole() == BeanDefinition.ROLE_APPLICATION) {
+                System.out.println("beanDefinitionName = " + beanDefinitionName);
+                System.out.println("ac.getBean(beanDefinitionName) = " + ac.getBean(beanDefinitionName));
+            }
         }
     }
 }
