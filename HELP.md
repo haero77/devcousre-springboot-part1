@@ -1,7 +1,8 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'org.prgms.devcourse-spring-order' is invalid and this project uses 'org.prgms.kdt' instead.
+* The original package name 'org.prgms.devcourse-spring-order' is invalid and this project uses 'org.prgms.voucherapp'
+  instead.
 
 # Getting Started
 

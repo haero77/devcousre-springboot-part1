@@ -1,9 +1,7 @@
-package org.prgms.kdt.service;
+package org.prgms.voucherapp.order;
 
-import org.prgms.kdt.model.Order;
-import org.prgms.kdt.model.OrderItem;
-import org.prgms.kdt.model.Voucher;
-import org.prgms.kdt.repository.OrderRepository;
+import org.prgms.voucherapp.voucher.Voucher;
+import org.prgms.voucherapp.voucher.VoucherService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

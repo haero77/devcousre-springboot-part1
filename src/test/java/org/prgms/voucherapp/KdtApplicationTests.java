@@ -1,4 +1,4 @@
-package org.prgms.kdt;
+package org.prgms.voucherapp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

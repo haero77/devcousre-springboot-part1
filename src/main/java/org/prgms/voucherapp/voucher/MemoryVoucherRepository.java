@@ -1,6 +1,5 @@
-package org.prgms.kdt.repository;
+package org.prgms.voucherapp.voucher;
 
-import org.prgms.kdt.model.Voucher;
 import org.springframework.stereotype.Repository;
 
 import java.util.Map;

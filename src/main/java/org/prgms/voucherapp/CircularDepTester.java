@@ -1,4 +1,4 @@
-package org.prgms.kdt;
+package org.prgms.voucherapp;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;

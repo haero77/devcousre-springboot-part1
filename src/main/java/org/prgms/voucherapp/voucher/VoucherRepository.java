@@ -1,6 +1,4 @@
-package org.prgms.kdt.repository;
-
-import org.prgms.kdt.model.Voucher;
+package org.prgms.voucherapp.voucher;
 
 import java.util.Optional;
 import java.util.UUID;

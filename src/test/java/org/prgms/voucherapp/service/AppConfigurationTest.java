@@ -1,10 +1,11 @@
-package org.prgms.kdt.service;
+package org.prgms.voucherapp.service;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.prgms.kdt.AppConfiguration;
-import org.prgms.kdt.model.Order;
-import org.prgms.kdt.model.OrderItem;
+import org.prgms.voucherapp.AppConfiguration;
+import org.prgms.voucherapp.order.Order;
+import org.prgms.voucherapp.order.OrderItem;
+import org.prgms.voucherapp.order.OrderService;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

@@ -1,4 +1,4 @@
-package org.prgms.kdt;
+package org.prgms.voucherapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

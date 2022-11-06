@@ -1,4 +1,6 @@
-package org.prgms.kdt.model;
+package org.prgms.voucherapp.order;
+
+import org.prgms.voucherapp.voucher.Voucher;
 
 import java.util.List;
 import java.util.Optional;

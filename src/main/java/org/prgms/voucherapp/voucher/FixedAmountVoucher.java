@@ -1,4 +1,4 @@
-package org.prgms.kdt.model;
+package org.prgms.voucherapp.voucher;
 
 import java.util.UUID;
 

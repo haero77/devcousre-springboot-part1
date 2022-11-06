@@ -1,6 +1,4 @@
-package org.prgms.kdt.repository;
-
-import org.prgms.kdt.model.Order;
+package org.prgms.voucherapp.order;
 
 public interface OrderRepository {
     

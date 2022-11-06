@@ -1,4 +1,4 @@
-package org.prgms.kdt.model;
+package org.prgms.voucherapp.order;
 
 public enum OrderStatus {
     ACCEPTED,
