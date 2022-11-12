@@ -9,8 +9,8 @@ import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Repository
-@Profile({"local", "default"})
-public class MemoryVoucherRepository implements VoucherRepository {
+@Profile("dev")
+public class JdbcVoucherRepository implements VoucherRepository {
 
     private final Map<UUID, Voucher> storage = new ConcurrentHashMap<>();
 
@@ -25,4 +25,3 @@ public class MemoryVoucherRepository implements VoucherRepository {
         return voucher;
     }
 }
-

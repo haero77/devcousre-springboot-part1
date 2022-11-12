@@ -22,10 +22,10 @@ public class OrderProperties implements InitializingBean {
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        System.out.println(MessageFormat.format("[OrderProperties] version-> {0}", version));
-        System.out.println(MessageFormat.format("[OrderProperties] minimumOrderAmount-> {0}", minimumOrderAmount));
-        System.out.println(MessageFormat.format("[OrderProperties] supportVouchers -> {0}", supportVendors));
-        System.out.println(MessageFormat.format("[OrderProperties] supportVouchers -> {0}", description));
+        System.out.println(MessageFormat.format("OrderProperties.afterPropertiesSet():  version-> {0}", version));
+        System.out.println(MessageFormat.format("OrderProperties.afterPropertiesSet():  minimumOrderAmount-> {0}", minimumOrderAmount));
+        System.out.println(MessageFormat.format("OrderProperties.afterPropertiesSet():  supportVouchers -> {0}", supportVendors));
+        System.out.println(MessageFormat.format("OrderProperties.afterPropertiesSet():  supportVouchers -> {0}", description));
     }
 
     public String getVersion() {
