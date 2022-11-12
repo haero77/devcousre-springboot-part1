@@ -1,0 +1,13 @@
+# kdt.version
+kdt:
+  version: "v2.0"
+  minimum-order-amount: 1
+  support-vendors:
+    - a
+    - b
+    - c
+    - d
+  description: |- # - 기호가 있으면 줄바꿈 포함하지 않음
+    line 1 hello world
+    line 2 xxxx
+    line 3
